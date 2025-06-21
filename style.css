@@ -128,11 +128,12 @@ section h2 {
 
 /* ==================== CARDS ==================== */
 .cards, .extra-services {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   justify-content: center;
 }
+
 
 .card, .product, .extra-card {
   background: white;
@@ -761,5 +762,41 @@ body {
   }
   h2 {
     font-size: 1.5rem;
+  }
+}
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  header {
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding-top: 140px; /* aumenta o espaçamento para o menu não cobrir */
   }
 }
