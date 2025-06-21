@@ -666,3 +666,100 @@ form button:hover {
   border: 0;
   display: block;
 }
+.contact-info {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.contact-item i {
+  margin-right: 6px;
+  background: linear-gradient(to right, #00d4ff, #0072ff);-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-item strong {
+  background: linear-gradient(to right, #00d4ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.separator {
+  color: #ccc;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+@media (max-width: 768px) {
+  /* Menu: de horizontal para vertical */
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Banner: texto centralizado e imagem responsiva */
+  header .banner {
+    text-align: center;
+  }
+  header .banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Cards (produtos, serviços): 2 por linha ou 1 por linha em celular */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  /* Gallery: ajusta para 2 colunas */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  /* Testimonials: font‑size menor e espaçamento reduzido */
+  .testimonials blockquote {
+    font-size: 14px;
+    margin: 12px 0;
+  }
+
+  /* Footer: itens empilhados e centralizados */
+  footer {
+    text-align: center;
+  }
+  footer .contact-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
