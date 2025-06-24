@@ -804,16 +804,14 @@ body {
   .cards,
   .extra-services,
   #products .cards-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    justify-items: center;
+    grid-template-columns: 1fr; /* UM POR LINHA no mobile */
+    gap: 20px;
   }
 
   .card,
   .extra-card,
   .product {
     width: 100%;
-    max-width: 180px; /* ou ajuste conforme o visual ideal */
+    max-width: none; /* Remove limite que espreme os cards */
   }
 }
