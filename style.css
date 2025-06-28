@@ -59,80 +59,70 @@ nav a:hover {
 /* ==================== HERO ==================== */
 .hero {
   position: relative;
-  height: 100vh;
-  background-image: url('img/Top-Banner.png'); /* ou o nome correto da sua imagem */
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('img/top-banner.jpg'); /* use a extensão correta */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 6rem 1rem 2rem; /* top = espaço pro header */
-  text-align: center;
-  color: white;
-}
-.hero {
-  background-color: red; /* remova depois */
-}
-
-
-.hero-banner {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-}
-
-.hero-text h1 {
-  font-size: 2.4rem;
-  margin-top: 1rem;
-  color: #000000;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-}
-
-.hero-text p {
-  font-size: 1.1rem;
-  color: #444444;
-  margin-top: 0.5rem;
-}
-
-.hero-button {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-}
-
-.hero-button .btn {
-  padding: 0.8rem 2rem;
-  background: linear-gradient(to right, #00d4ff, #0072ff);
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
   color: white;
-  text-decoration: none;
-  border-radius: 30px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 2;
+}
+
+.hero::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.hero::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  padding: 12px 24px;
   font-size: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: inline-block;
-  text-align: center;
+  background-color: #00d4ff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.hero-button .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-}
-
-/* ==================== SECTION ==================== */
-section {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #222;
+.hero .btn:hover {
+  background-color: #0072ff;
 }
 
 /* ==================== CARDS ==================== */
